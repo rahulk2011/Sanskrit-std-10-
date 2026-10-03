@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GSEB ધોરણ 10 સંસ્કૃત - સંસ્કૃત સાધના</title>
+  <meta name="description" content="GSEB ધોરણ 10 સંસ્કૃત વ્યાકરણ, પદ્ય, ગદ્ય, શોર્ટકટ ટ્રીક્સ, કોષ્ટકો, અનુવાદ અને બોર્ડ IMP પ્રશ્નો.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0f1d;
+      --card-bg: #161f36;
+      --card-hover: #1e2b4a;
+      --card-border: #243256;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent-gold: #fbbf24;
+      --accent-gold-glow: rgba(251, 191, 36, 0.25);
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --app-font: 'Noto Sans Gujarati', 'Mukta', sans-serif;
+      --sanskrit-font: 'Noto Sans Devanagari', 'Mukta', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--app-font);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .app-viewport {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      background-color: #0b1122;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+      border-left: 1px solid rgba(255, 255, 255, 0.05);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Sticky Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 17, 34, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .back-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: var(--accent-gold);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .back-btn:hover {
+      background: #334155;
+      border-color: var(--accent-gold);
+    }
+
+    .header-title-box {
+      min-width: 0;
+    }
+
+    .header-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .header-subtitle {
+      font-size: 11px;
+      color: var(--accent-gold);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .icon-btn {
+      background: #161f36;
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    /* Content Area */
+    .app-main {
+      flex: 1;
+      padding: 14px;
+      padding-bottom: 70px;
+    }
+
+    /* Category Nav Tabs */
+    .category-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: #0f172a;
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      margin-bottom: 14px;
+    }
+
+    .cat-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .cat-btn.active {
+      background: var(--card-bg);
+      color: var(--accent-gold);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Search Bar */
+    .search-box {
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 9px 12px 9px 36px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-gold);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* Card Grid */
+    .item-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .item-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .item-card:hover, .item-card:active {
+      background: var(--card-hover);
+      border-color: rgba(251, 191, 36, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .item-card-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .item-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .item-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-sanskrit {
+      font-family: var(--sanskrit-font);
+      color: var(--accent-gold);
+      font-size: 13px;
+    }
+
+    .item-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-arrow {
+      color: var(--accent-gold);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* Sub Tabs inside Detail View */
+    .sub-tabs-container {
+      position: sticky;
+      top: 53px;
+      z-index: 40;
+      background: var(--bg-dark);
+      padding: 8px 0;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .sub-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 2px;
+    }
+
+    .sub-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .sub-tab-btn {
+      flex: 1;
+      min-width: 90px;
+      white-space: nowrap;
+      background: #111a30;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .sub-tab-btn.active {
+      background: rgba(251, 191, 36, 0.15);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    /* Detail View Blocks */
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .box-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Sanskrit Text Block */
+    .shloka-block {
+      background: #0f1629;
+      border-left: 3px solid var(--accent-gold);
+      padding: 12px 14px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 12px;
+    }
+
+    .sanskrit-text {
+      font-family: var(--sanskrit-font);
+      font-size: 16px;
+      font-weight: 600;
+      color: #fef08a;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .gujarati-trans {
+      font-size: 13px;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 8px 10px;
+      border-radius: 6px;
+      border-left: 2px solid var(--accent-cyan);
+    }
+
+    .shloka-num {
+      display: inline-block;
+      font-size: 11px;
+      background: rgba(251, 191, 36, 0.2);
+      color: var(--accent-gold);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    /* Suffix Highlight in Tables (Neon Gold) */
+    .suffix-hl {
+      color: #fffb00 !important;
+      background: rgba(251, 191, 36, 0.28) !important;
+      border: 1px solid #fbbf24 !important;
+      font-weight: 800 !important;
+      padding: 2px 5px !important;
+      border-radius: 5px !important;
+      text-shadow: 0 0 8px rgba(251, 191, 36, 0.7) !important;
+      display: inline-block;
+      margin: 1px;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    table.sanskrit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      text-align: center;
+      background: #0d1426;
+    }
+
+    table.sanskrit-table th {
+      background: #18233e;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      padding: 8px 6px;
+      border: 1px solid var(--card-border);
+      font-size: 11.5px;
+    }
+
+    table.sanskrit-table td {
+      padding: 8px 6px;
+      border: 1px solid var(--card-border);
+      font-family: var(--sanskrit-font);
+      color: #e2e8f0;
+      font-size: 13px;
+    }
+
+    table.sanskrit-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Rules & Tricks */
+    .trick-card {
+      background: linear-gradient(145deg, #131d33, #0f172a);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .trick-title {
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trick-badge {
+      background: #fbbf24;
+      color: #0b1122;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .trick-desc {
+      font-size: 12.5px;
+      color: #cbd5e1;
+    }
+
+    .trick-formula {
+      background: #090e1a;
+      border-left: 3px solid #10b981;
+      padding: 6px 10px;
+      margin-top: 6px;
+      font-family: var(--sanskrit-font);
+      font-size: 13px;
+      color: #a7f3d0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* Glossary Table */
+    .word-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      gap: 12px;
+    }
+
+    .word-sanskrit {
+      font-family: var(--sanskrit-font);
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-size: 14px;
+    }
+
+    .word-meaning {
+      font-size: 13px;
+      color: #e2e8f0;
+      text-align: right;
+    }
+
+    /* IMP Questions */
+    .imp-card {
+      background: #111a30;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .imp-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .imp-tag {
+      background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .imp-year {
+      color: var(--text-muted);
+    }
+
+    .imp-q {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .imp-ans {
+      font-size: 12.5px;
+      color: #94a3b8;
+      background: #0c1222;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border-left: 2px solid var(--accent-emerald);
+    }
+
+    /* MCQ Quiz Section */
+    .quiz-card {
+      background: #121c33;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .quiz-q {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .quiz-opt-btn {
+      background: #0d1426;
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 13px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quiz-opt-btn:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    .quiz-opt-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #6ee7b7 !important;
+      font-weight: 700;
+    }
+
+    .quiz-opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.2) !important;
+      border-color: #f43f5e !important;
+      color: #fda4af !important;
+    }
+
+    .quiz-feedback {
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: none;
+    }
+
+    .quiz-feedback.show {
+      display: block;
+    }
+
+    .quiz-tools {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .btn-primary {
+      flex: 1;
+      background: linear-gradient(135deg, #d97706, #b45309);
+      color: #fff;
+      border: none;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .btn-secondary {
+      flex: 1;
+      background: #1e293b;
+      color: var(--accent-gold);
+      border: 1px solid #334155;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-content {
+      background: #161f36;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 440px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      background: #0d1426;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Font size scaling */
+    .font-lg .sanskrit-text { font-size: 19px; }
+    .font-lg .gujarati-trans { font-size: 14.5px; }
+    .font-lg table.sanskrit-table td { font-size: 14.5px; }
+    /* Table Switcher Chips */
+    .table-selector-nav {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0 14px 0;
+      padding: 2px;
+    }
+    .table-selector-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .table-selector-chip {
+      background: #0d1426;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .table-selector-chip:hover {
+      border-color: var(--accent-gold);
+      color: #fff;
+    }
+    .table-selector-chip.active {
+      background: rgba(251, 191, 36, 0.2);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-viewport" id="appViewport">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button id="backBtn" class="back-btn hidden" onclick="goHome()">
+          <span>←</span> પાછા જાઓ
+        </button>
+        <div class="header-title-box">
+          <span class="header-title" id="headerTitle">સંસ્કૃત સાધના</span>
+          <span class="header-subtitle" id="headerSubtitle">GSEB ધોરણ 10 અભ્યાસક્રમ</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleFontSize()" title="ફોન્ટ સાઈઝ">A±</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main" id="mainContent">
+      <!-- HOME VIEW -->
+      <section id="homeView">
+        <!-- 3 Category Tabs -->
+        <nav class="category-nav">
+          <button class="cat-btn active" id="tabVyakarana" onclick="switchCategory('vyakarana')">વ્યાકરણ</button>
+          <button class="cat-btn" id="tabPadya" onclick="switchCategory('padya')">પદ્ય (કાવ્યો)</button>
+          <button class="cat-btn" id="tabGadya" onclick="switchCategory('gadya')">ગદ્ય & નાટ્ય</button>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="પ્રકરણ અથવા વ્યાકરણ ટોપિક શોધો..." oninput="handleSearch()">
+        </div>
+
+        <!-- Items List -->
+        <div id="itemsContainer" class="item-grid">
+          <!-- Dynamic rendering -->
+        </div>
+      </section>
+
+      <!-- DETAIL VIEW -->
+      <section id="detailView" class="hidden">
+        <!-- Sub Tabs Container -->
+        <div class="sub-tabs-container">
+          <div class="sub-tabs" id="subTabsBar">
+            <!-- Dynamic sub tabs -->
+          </div>
+        </div>
+
+        <!-- Tab Content Area -->
+        <div id="tabContentArea">
+          <!-- Dynamic detail content -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Add Custom MCQ Modal -->
+    <div id="addMcqModal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <div class="modal-title">
+          <span>નવો MCQ ઉમેરો</span>
+          <button class="icon-btn" style="width:26px; height:26px" onclick="closeMcqModal()">✕</button>
+        </div>
+        <form id="customMcqForm" onsubmit="saveCustomMcq(event)">
+          <div class="form-group">
+            <label>પ્રશ્ન (ગુજરાતી અથવા સંસ્કૃત):</label>
+            <input type="text" id="mcqQuestion" required placeholder="દા.ત. 'ગન્તુમ્' પદસ્ય કૃદન્ત પ્રકારઃ કઃ?">
+          </div>
+          <div class="form-group">
+            <label>વિકલ્પ A:</label>
+            <input type="text" id="mcqOptA" required placeholder="સંબંધક ભૂતકૃદંત">
+          </div>
+          <div class="form-group">
+            <label>વિકલ્પ B:</label>
+            <input type="text" id="mcqOptB" required placeholder="હેત્વર્થ કૃદંત">
+          </div>
+          <div class="form-group">
+            <label>વિકલ્પ C:</label>
+            <input type="text" id="mcqOptC" required placeholder="કર્મણિ ભૂતકૃદંત">
+          </div>
+          <div class="form-group">
+            <label>વિકલ્પ D:</label>
+            <input type="text" id="mcqOptD" required placeholder="વિદ્યર્થ કૃદંત">
+          </div>
+          <div class="form-group">
+            <label>સાચો વિકલ્પ:</label>
+            <select id="mcqCorrectAnswer">
+              <option value="0">વિકલ્પ A</option>
+              <option value="1">વિકલ્પ B</option>
+              <option value="2">વિકલ્પ C</option>
+              <option value="3">વિકલ્પ D</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>સમજૂતી (Explanation):</label>
+            <input type="text" id="mcqExplanation" placeholder="દા.ત. 'તુમ્' પ્રત્યય આવે એટલે હેત્વર્થ કૃદંત બને.">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; margin-top:8px;">MCQ સાચવો</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // GSEB Class 10 Sanskrit - Complete SPA Data & Logic
+    const APP_STATE = {
+      currentCategory: 'vyakarana',
+      activeItem: null,
+      activeSubTab: 0,
+      searchQuery: '',
+      fontSizeLarge: false,
+      userCustomMcqs: JSON.parse(localStorage.getItem('gseb10_custom_mcq') || '{}')
+    };
+
+    // GRAMMAR TOPICS
+    const GRAMMAR_TOPICS = [
+      {
+        id: 'krudant',
+        title: 'કૃદંત (Krudant)',
+        sanskrit: 'कृदन्ताः',
+        desc: 'સંબંધક, હેત્વર્થ, કર્મણિ, કર્તરિ અને વિદ્યર્થ કૃદંત ઓળખવાની સરળ ટ્રીક',
+        tricks: [
+          { title: '૧. સંબંધક ભૂતકૃદંત (ત્વા, ય, ત્ય)', badge: 'ત્વા / ય / ત્ય', desc: 'ધાતુની પાછળ ત્વા (त्वा), ય (य) કે ત્ય (त्य) જોડાયેલું હોય ત્યારે સંબંધક ભૂતકૃદંત બને છે.', formula: 'ધાતુ + त्वा / य / त्य ➔ સંબંધક ભૂતકૃદંત (દા.ત. गत्वा, आगत्य, विहस्य)' },
+          { title: '૨. હેત્વર્થ કૃદંત (તુમ્ / ઇતુમ્)', badge: 'તુમ્ / ઇતુમ્', desc: 'ક્રિયા કરવાનો હેતુ દર્શાવવા ધાતુ પાછળ તુમ્ (तुम्) કે ઇતુમ્ (इतुम्) પ્રત્યય આવે.', formula: 'ધાતુ + तुम् / इतुम् ➔ હેત્વર્થ કૃદંત (દા.ત. पातुम्, गन्तुम्, खादितुम्)' },
+          { title: '૩. કર્મણિ ભૂતકૃદંત (ત, તા, તમ્)', badge: 'તઃ / તા / તમ્', desc: 'ધાતુની પાછળ ત (तः, ता, तम्) અથવા ન (नः, ना, नम्) જોડાયેલો હોય.', formula: 'ધાતુ + त / न ➔ કર્મણિ ભૂતકૃદંત (દા.ત. कृतः, गता, दत्तम्, भिन्नः)' },
+          { title: '૪. વિદ્યર્થ કૃદંત (તવ્ય, અનીય)', badge: 'તવ્ય / અનીય', desc: 'કર્તવ્ય કે યોગ્યતા દર્શાવવા તવ્ય (तव्य) અથવા અનીય (अनीय) આવે.', formula: 'ધાતુ + तव्य / अनीय / य ➔ વિદ્યર્થ કૃદંત (દા.ત. कर्तव्यम्, करणीयम्)' }
+        ],
+        tables: [
+          {
+            title: 'કૃદંત પ્રત્યયો અને ઓળખ કોષ્ટક',
+            headers: ['કૃદંત પ્રકાર', 'મુખ્ય પ્રત્યય (Golden Highlight)', 'પુલ્લિંગ રૂપ', 'સ્ત્રીલિંગ રૂપ', 'નપુંસકલિંગ રૂપ'],
+            rows: [
+              ['સંબંધક ભૂતકૃદંત', '<span class="suffix-hl">त्वा</span> / <span class="suffix-hl">य</span> / <span class="suffix-hl">त्य</span>', 'ग<span class="suffix-hl">त्वा</span> (ગઈને)', 'आदा<span class="suffix-hl">य</span> (લઈને)', 'विह<span class="suffix-hl">स्य</span> (હસીને)'],
+              ['હેત્વર્થ કૃદંત', '<span class="suffix-hl">तुम्</span> / <span class="suffix-hl">इतुम्</span>', 'गन्<span class="suffix-hl">तुम्</span> (જવા માટે)', 'पा<span class="suffix-hl">तुम्</span> (પીવા માટે)', 'पठि<span class="suffix-hl">तुम्</span> (વાંચવા માટે)'],
+              ['કર્મણિ ભૂતકૃદંત', '<span class="suffix-hl">तः</span> / <span class="suffix-hl">ता</span> / <span class="suffix-hl">तम्</span>', 'कृ<span class="suffix-hl">तः</span>', 'ग<span class="suffix-hl">ता</span>', 'पतित<span class="suffix-hl">म्</span>'],
+              ['વિદ્યર્થ કૃદંત', '<span class="suffix-hl">तव्य</span> / <span class="suffix-hl">अनीय</span>', 'कर्तव्<span class="suffix-hl">यः</span>', 'रक्षणी<span class="suffix-hl">या</span>', 'पठितव्<span class="suffix-hl">यम्</span>'],
+              ['કર્તરિ ભૂતકૃદંત', '<span class="suffix-hl">वान्</span> / <span class="suffix-hl">वती</span> / <span class="suffix-hl">वत्</span>', 'कृत<span class="suffix-hl">वान्</span>', 'गत<span class="suffix-hl">वती</span>', 'दृष्ट<span class="suffix-hl">वत्</span>']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'छात्रः पुस्तकं पठितुम् विद्यालयं गच्छति।', gujarati: 'વિદ્યાર્થી પુસ્તક વાંચવા માટે શાળાએ જાય છે. (પઠિતુમ્ = હેત્વર્થ કૃદંત)' },
+          { sanskrit: 'सत्यं श्रुत्वा सः प्रसन्नः अभवत्।', gujarati: 'સત્ય સાંભળીને તે ખુશ થયો. (શ્રુત્વા = સંબંધક ભૂતકૃદંત)' },
+          { sanskrit: 'धर्मः सदा रक्षणीयः।', gujarati: 'ધર્મનું સદા રક્ષણ કરવું જોઈએ. (રક્ષણીયઃ = વિદ્યર્થ કૃદંત)' }
+        ],
+        mcqs: [
+          { q: "'पातुम्' पदस्य कृदन्तरूपं किम्?", opts: ['सम्बन्धक भूतकृदन्त', 'हेत्वर्थ कृદન્ત', 'कर्मणि भूतकृદન્ત', 'विद्यर्थ कृદન્ત'], ans: 1, exp: "'तुम्' प्रत्यय आववाथी 'पातुम्' हेत्वर्थ कृદન્ત बने छे." },
+          { q: "'विहस्य' इत्यत्र कः कृદન્તઃ प्रयुक्तः?", opts: ['हेत्वर्थ', 'सम्बन्धक भूतकृદન્ત', 'कर्तरિ भूतकृદન્ત', 'विद्यर्थ'], ans: 1, exp: "उपसर्ग + धातु पछी 'य' प्रत्यय आववाथी आ सम्बन्धक भूतकृદન્ત छे." },
+          { q: "'कर्तव्यम्' इत्यस्य कृદન્ત પ્રકારઃ कः?", opts: ['विद्यर्थ कृદન્ત', 'कर्मणि भूतकृદન્ત', 'हेत्वर्थ कृદન્ત', 'सम्बन्धक भूतकृદન્ત'], ans: 0, exp: "'तव्यम्' प्रत्यय छे, तेथी आ વિદ્યર્થ કૃદંત છે." }
+        ]
+      },
+      {
+        id: 'kaal_dhatu',
+        title: 'કાળ અને ધાતુરૂપ (Tenses & Verbs)',
+        sanskrit: 'काल-धातुरूपाणि',
+        desc: 'વર્તમાનકાળ, ભવિષ્યકાળ, હ્યસ્તન ભૂતકાળ, આજ્ઞાર્થ, વિદ્યર્થ પરસ્મૈપદ અને આત્મનેપદ',
+        tricks: [
+          { title: 'વર્તમાનકાળ પરસ્મૈપદ શોર્ટકટ', badge: 'તિ, તઃ, અન્તિ', desc: 'અન્ય પુરુષ એકવચનમાં "તિ", દ્વિવચનમાં "તઃ", બહુવચનમાં "અન્તિ" આવે.', formula: 'મી, વઃ, મઃ | સિ, થઃ, થ | તિ, તઃ, અન્તિ' },
+          { title: 'સામાન્ય ભવિષ્યકાળ શોર્ટકટ', badge: 'ષ્યતિ / શિષ્યતિ', desc: 'વર્તમાનકાળના પ્રત્યયોની આગળ "ષ્ય" અથવા "શિષ્ય" જોડાય.', formula: 'ગમિષ્યતિ (જશે), પઠિષ્યતિ (વાંચશે), કરિષ્યતિ (કરશે)' },
+          { title: 'હ્યસ્તન ભૂતકાળ શોર્ટકટ', badge: 'અ + ધાતુ', desc: 'ધાતુની શરૂઆતમાં હંમેશા "અ" (अ) લાગે છે. દા.ત. અગચ્છત્, અપઠત્.', formula: 'अ + ધાતુ + त्/ताम्/अन् (દા.ત. अभवत्)' }
+        ],
+        tables: [
+          {
+            title: 'વર્તમાનકાળ (લટ્ લકાર) - પરસ્મૈપદ પ્રત્યયો',
+            headers: ['પુરુષ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['ઉત્તમ પુરુષ (અહમ્)', 'पठा<span class="suffix-hl">मि</span> (હું વાંચું છું)', 'पठा<span class="suffix-hl">वः</span>', 'पठा<span class="suffix-hl">मः</span>'],
+              ['મધ્યમ પુરુષ (ત્વમ્)', 'पठ<span class="suffix-hl">सि</span> (તું વાંચે છે)', 'पठ<span class="suffix-hl">थः</span>', 'पठ<span class="suffix-hl">थ</span>'],
+              ['અન્ય પુરુષ (સઃ/સા)', 'पठ<span class="suffix-hl">ति</span> (તે વાંચે છે)', 'पठ<span class="suffix-hl">तः</span>', 'पठ<span class="suffix-hl">न्ति</span>']
+            ]
+          },
+          {
+            title: 'વર્તમાનકાળ (લટ્ લકાર) - આત્મનેપદ પ્રત્યયો',
+            headers: ['પુરુષ', 'એકવચન', 'દ્વિવચન', 'બહુવચન'],
+            rows: [
+              ['ઉત્તમ પુરુષ', 'लभ<span class="suffix-hl">े</span>', 'लभा<span class="suffix-hl">वहे</span>', 'लभा<span class="suffix-hl">महे</span>'],
+              ['મધ્યમ પુરુષ', 'लभ<span class="suffix-hl">से</span>', 'लभे<span class="suffix-hl">थे</span>', 'लभ<span class="suffix-hl">ध्वे</span>'],
+              ['અન્ય પુરુષ', 'लभ<span class="suffix-hl">ते</span>', 'लभे<span class="suffix-hl">ते</span>', 'लभ<span class="suffix-hl">न्ते</span>']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'बालकः सत्यं वदति।', gujarati: 'બાળક સત્ય બોલે છે. (વદતિ = વર્તમાનકાળ અન્ય પુરુષ એકવચન)' },
+          { sanskrit: 'ते सर्वे वनं गमिष्यन्ति।', gujarati: 'તેઓ બધા વનમાં જશે. (ગમિષ્યન્તિ = ભવિષ્યકાળ અન્ય પુરુષ બહુવચન)' }
+        ],
+        mcqs: [
+          { q: "'पठन्ति' रूपं कस्य कालस्य अस्ति?", opts: ['वर्तमानकालः अन्य पुरुष बहुवचन', 'भविष्यकालः मध्यम पुरुष', 'भूतकालः अन्य पुरुष', 'आज्ञार्थः উত্তম પુરુષ'], ans: 0, exp: "'अन्ति' प्रत्यय वर्तमानकाल અન્ય પુરુષ બહુવચન દર્શાવે છે." },
+          { q: "'गमिष्यति' रूपे कः कालः प्रयुक्तः?", opts: ['ह्यस्तन भूतकालः', 'सामान्य भविष्यत्कालः', 'वर्तमानकालः', 'विध्यर्थः'], ans: 1, exp: "'ષ્યતિ' પ્રત્યય સામાન્ય ભવિષ્યકાળ દર્શાવે છે." }
+        ]
+      },
+      {
+        id: 'naamrup',
+        title: 'નામરૂપ વિભક્તિ (Noun Declensions)',
+        sanskrit: 'नाम-विभक्तिरूपाणि',
+        desc: 'પ્રથમા થી સપ્તમી વિભક્તિના પ્રત્યયો (રામ, વન, લતા, અસ્મદ્, યુષ્મદ્)',
+        tricks: [
+          { title: 'વિભક્તિ ઓળખવાની સુપર ટ્રીક', badge: 'એકવચન ટ્રીક', desc: 'પ્રથમા: ઃ/મ્ | દ્વિતીયા: મ્ | તૃતીયા: ણ/એન/યા | ચતુર્થી: ાય/યૈ | પંચમી: ાત્/યાઃ | ષષ્ઠી: સ્ય/યાઃ | સપ્તમી: એ/યામ્', formula: 'જનસ્ય = ષષ્ઠી (નું/ના/ની) | વને = સપ્તમી (માં/પર) | રામાત્ = પંચમી (થી)' }
+        ],
+        tables: [
+          {
+            title: '૧. રામ (અકારાન્ત પુલ્લિંગ - Akarant Masculine)',
+            shortName: '૧. રામ (પુલ્લિંગ)',
+            headers: ['વિભક્તિ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['પ્રથમા (કર્તા)', 'राम<span class="suffix-hl">ः</span>', 'राम<span class="suffix-hl">ौ</span>', 'राम<span class="suffix-hl">ाः</span>'],
+              ['દ્વિતીયા (કર્મ)', 'राम<span class="suffix-hl">म्</span>', 'राम<span class="suffix-hl">ौ</span>', 'राम<span class="suffix-hl">ान्</span>'],
+              ['તૃતીયા (કરણ)', 'रामे<span class="suffix-hl">ण</span>', 'रामा<span class="suffix-hl">भ्याम्</span>', 'राम<span class="suffix-hl">ैः</span>'],
+              ['ચતુર્થી (સંપ્રદાન)', 'रामा<span class="suffix-hl">य</span>', 'रामा<span class="suffix-hl">भ्याम्</span>', 'रामे<span class="suffix-hl">भ्यः</span>'],
+              ['પંચમી (અપાદાન)', 'रामा<span class="suffix-hl">त्</span>', 'रामा<span class="suffix-hl">भ्याम्</span>', 'रामे<span class="suffix-hl">भ्यः</span>'],
+              ['ષષ્ઠી (સંબંધ)', 'राम<span class="suffix-hl">स्य</span>', 'राम<span class="suffix-hl">योः</span>', 'रामा<span class="suffix-hl">णाम्</span>'],
+              ['સપ્તમી (અધિકરણ)', 'रामे', 'राम<span class="suffix-hl">योः</span>', 'रामे<span class="suffix-hl">षु</span>'],
+              ['સંબોધન', 'हे राम!', 'हे राम<span class="suffix-hl">ौ</span>!', 'हे राम<span class="suffix-hl">ाः</span>!']
+            ]
+          },
+          {
+            title: '૨. વન (અકારાન્ત નપુસકલિંગ - Akarant Neuter)',
+            shortName: '૨. વન (નપુંસક)',
+            headers: ['વિભક્તિ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['પ્રથમા (કર્તા)', 'वन<span class="suffix-hl">म्</span>', 'वन<span class="suffix-hl">े</span>', 'वन<span class="suffix-hl">ानि</span>'],
+              ['દ્વિતીયા (કર્મ)', 'वन<span class="suffix-hl">म्</span>', 'वन<span class="suffix-hl">े</span>', 'वन<span class="suffix-hl">ानि</span>'],
+              ['તૃતીયા (કરણ)', 'वने<span class="suffix-hl">न</span>', 'वना<span class="suffix-hl">भ्याम्</span>', 'वन<span class="suffix-hl">ैः</span>'],
+              ['ચતુર્થી (સંપ્રદાન)', 'वना<span class="suffix-hl">य</span>', 'वना<span class="suffix-hl">भ्याम्</span>', 'वने<span class="suffix-hl">भ्यः</span>'],
+              ['પંચમી (અપાદાન)', 'वना<span class="suffix-hl">त्</span>', 'वना<span class="suffix-hl">भ्याम्</span>', 'वने<span class="suffix-hl">भ्यः</span>'],
+              ['ષષ્ઠી (સંબંધ)', 'वन<span class="suffix-hl">स्य</span>', 'वन<span class="suffix-hl">योः</span>', 'वना<span class="suffix-hl">नाम्</span>'],
+              ['સપ્તમી (અધિકરણ)', 'वन<span class="suffix-hl">े</span>', 'वन<span class="suffix-hl">योः</span>', 'वने<span class="suffix-hl">षु</span>'],
+              ['સંબોધન', 'हे वन!', 'हे वन<span class="suffix-hl">े</span>!', 'हे वन<span class="suffix-hl">ानि</span>!']
+            ]
+          },
+          {
+            title: '૩. લતા (આકારાન્ત સ્ત્રીલિંગ - Akarant Feminine)',
+            shortName: '૩. લતા (સ્ત્રીલિંગ)',
+            headers: ['વિભક્તિ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['પ્રથમા (કર્તા)', 'लता', 'लत<span class="suffix-hl">े</span>', 'लता<span class="suffix-hl">ः</span>'],
+              ['દ્વિતીયા (કર્મ)', 'लता<span class="suffix-hl">म्</span>', 'लत<span class="suffix-hl">े</span>', 'लता<span class="suffix-hl">ः</span>'],
+              ['તૃતીયા (કરણ)', 'लत<span class="suffix-hl">या</span>', 'लता<span class="suffix-hl">भ्याम्</span>', 'लता<span class="suffix-hl">भिः</span>'],
+              ['ચતુર્થી (સંપ્રદાન)', 'लता<span class="suffix-hl">यै</span>', 'लता<span class="suffix-hl">भ्याम्</span>', 'लता<span class="suffix-hl">भ्यः</span>'],
+              ['પંચમી (અપાદાન)', 'लता<span class="suffix-hl">याः</span>', 'लता<span class="suffix-hl">भ्याम्</span>', 'लता<span class="suffix-hl">भ्यः</span>'],
+              ['ષષ્ઠી (સંબંધ)', 'लता<span class="suffix-hl">याः</span>', 'लत<span class="suffix-hl">योः</span>', 'लता<span class="suffix-hl">नाम्</span>'],
+              ['સપ્તમી (અધિકરણ)', 'लता<span class="suffix-hl">याम्</span>', 'लत<span class="suffix-hl">योः</span>', 'लता<span class="suffix-hl">सु</span>'],
+              ['સંબોધન', 'हे लत<span class="suffix-hl">े</span>!', 'हे लत<span class="suffix-hl">े</span>!', 'हे लता<span class="suffix-hl">ः</span>!']
+            ]
+          },
+          {
+            title: '૪. ભૂમિ (હ્રસ્વ ઇકારાન્ત સ્ત્રીલિંગ - Ikarant Feminine)',
+            shortName: '૪. ભૂમિ (ઇકારાન્ત)',
+            headers: ['વિભક્તિ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['પ્રથમા (કર્તા)', 'भूमि<span class="suffix-hl">ः</span>', 'भूम<span class="suffix-hl">ी</span>', 'भूम<span class="suffix-hl">यः</span>'],
+              ['દ્વિતીયા (કર્મ)', 'भूमि<span class="suffix-hl">म्</span>', 'भूम<span class="suffix-hl">ी</span>', 'भूम<span class="suffix-hl">ीઃ</span>'],
+              ['તૃતીયા (કરણ)', 'भूम्<span class="suffix-hl">या</span>', 'भूमि<span class="suffix-hl">भ्याम्</span>', 'भूमि<span class="suffix-hl">भिः</span>'],
+              ['ચતુર્થી (સંપ્રદાન)', 'भूम्<span class="suffix-hl">यै</span> / भूम<span class="suffix-hl">ये</span>', 'भूमि<span class="suffix-hl">भ्याम्</span>', 'भूमि<span class="suffix-hl">भ्यः</span>'],
+              ['પંચમી (અપાદાન)', 'भूम्<span class="suffix-hl">याः</span> / भूम<span class="suffix-hl">ेः</span>', 'भूमि<span class="suffix-hl">भ्याम्</span>', 'भूमि<span class="suffix-hl">भ्यઃ</span>'],
+              ['ષષ્ઠી (સંબંધ)', 'भूम्<span class="suffix-hl">याः</span> / भूम<span class="suffix-hl">ेः</span>', 'भूम्<span class="suffix-hl">योः</span>', 'भूम<span class="suffix-hl">ीनाम्</span>'],
+              ['સપ્તમી (અધિકરણ)', 'भूम्<span class="suffix-hl">याम्</span> / भूम<span class="suffix-hl">ौ</span>', 'भूम्<span class="suffix-hl">योः</span>', 'भूमि<span class="suffix-hl">षु</span>'],
+              ['સંબોધન', 'हे भूम<span class="suffix-hl">े</span>!', 'हे भूम<span class="suffix-hl">ी</span>!', 'हे भूम<span class="suffix-hl">यः</span>!']
+            ]
+          },
+          {
+            title: '૫. નદી (દીર્ઘ ઈકારાન્ત સ્ત્રીલિંગ - Eekarant Feminine)',
+            shortName: '૫. નદી (ઈકારાન્ત)',
+            headers: ['વિભક્તિ', 'એકવચન (Golden Suffix)', 'દ્વિવચન (Golden Suffix)', 'બહુવચન (Golden Suffix)'],
+            rows: [
+              ['પ્રથમા (કર્તા)', 'नदी', 'नद्<span class="suffix-hl">यौ</span>', 'नद्<span class="suffix-hl">यः</span>'],
+              ['દ્વિતીયા (કર્મ)', 'नदी<span class="suffix-hl">म्</span>', 'नद्<span class="suffix-hl">यौ</span>', 'नदी<span class="suffix-hl">ः</span>'],
+              ['તૃતીયા (કરણ)', 'नद्<span class="suffix-hl">या</span>', 'नदी<span class="suffix-hl">भ्याम्</span>', 'नदी<span class="suffix-hl">भिः</span>'],
+              ['ચતુર્થી (સંપ્રદાન)', 'नद्<span class="suffix-hl">यै</span>', 'नदी<span class="suffix-hl">भ्याम्</span>', 'नदी<span class="suffix-hl">भ्यः</span>'],
+              ['પંચમી (અપાદાન)', 'नद्<span class="suffix-hl">याः</span>', 'नदी<span class="suffix-hl">भ्याम्</span>', 'नदी<span class="suffix-hl">भ્યઃ</span>'],
+              ['ષષ્ઠી (સંબંધ)', 'नद्<span class="suffix-hl">याः</span>', 'नद्<span class="suffix-hl">योः</span>', 'नदी<span class="suffix-hl">नाम्</span>'],
+              ['સપ્તમી (અધિકરણ)', 'नद्<span class="suffix-hl">याम्</span>', 'नद्<span class="suffix-hl">योः</span>', 'नदी<span class="suffix-hl">षु</span>'],
+              ['સંબોધન', 'हे नदि!', 'हे नद्<span class="suffix-hl">यौ</span>!', 'हे नद्<span class="suffix-hl">यः</span>!']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'नृपस्य आज्ञा पालिनीया।', gujarati: 'રાજાની આજ્ઞા પાળવી જોઈએ. (નૃપસ્ય = ષષ્ઠી વિભક્તિ એકવચન)' },
+          { sanskrit: 'विद्यालये छात्राः पठन्ति।', gujarati: 'શાળામાં વિદ્યાર્થીઓ ભણે છે. (વિદ્યાલયે = સપ્તમી વિભક્તિ એકવચન)' }
+        ],
+        mcqs: [
+          { q: "'वृक्षात्' पदे का विभक्तिः प्रयुक्ता?", opts: ['तृतीया विभक्तिः', 'पञ्चमी विभक्तिः', 'षष्ठी विभक्तिः', 'सप्तमी विभक्तिः'], ans: 1, exp: "'आत्' प्रत्यय પંચમી વિભક્તિ દર્શાવે છે (ઝાડ પરથી)." },
+          { q: "'रामस्य' रूपे का विभक्तिः अस्ति?", opts: ['द्वितीया', 'चतुर्थी', 'षष्ठी', 'प्रथमा'], ans: 2, exp: "'स्य' प्रत्यय ષષ્ઠી વિભક્તિ દર્શાવે છે." }
+        ]
+      },
+      {
+        id: 'sandhi',
+        title: 'સંધિ (Sandhi Rules)',
+        sanskrit: 'सन्धि-प्रकरणम्',
+        desc: 'સ્વરસંધિ, વ્યંજનસંધિ અને વિસર્ગસંધિના બોર્ડમાં વારંવાર પૂછાતા નિયમો',
+        tricks: [
+          { title: 'સંધિ છોડો અને જોડો શોર્ટકટ', badge: 'અવગ્રહ (ऽ)', desc: 'જો શબ્દમાં "ऽ" (અવગ્રહ) દેખાય, તો સંધિ છૂટી પાડતી વખતે "ऽ" નો "અ" થાય અને આગળ વિસર્ગ (ઃ) અથવા ઓ બને. દા.ત. सोऽपि ➔ सः + अपि.', formula: 'कोऽपि ➔ कः + अपि | यतोऽहम् ➔ यतः + अहम्' }
+        ],
+        tables: [
+          {
+            title: 'બોર્ડની સૌથી મહત્વપૂર્ણ સંધિઓ',
+            headers: ['જોડેલો શબ્દ', 'છૂટી પાડેલી સંધિ (Golden Rule)', 'સંધિ પ્રકાર'],
+            rows: [
+              ['सूर्योदयः', 'सूर्य + <span class="suffix-hl">उदयः</span> (अ + उ = ओ)', 'સ્વર સંધિ'],
+              ['इत्यादि', 'इति + <span class="suffix-hl">आदि</span> (इ + आ = या)', 'યણ્ સંધિ'],
+              ['तथापि', 'तथा + <span class="suffix-hl">अपि</span> (आ + अ = आ)', 'દીર્ઘ સંધિ'],
+              ['कश्चित्', 'कः + <span class="suffix-hl">चित्</span> (ः + च = श्च)', 'વિસર્ગ સંધિ']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'कश्चित् ➔ कः + चित्', gujarati: 'કોઈ એક (વિસર્ગ સંધિ)' },
+          { sanskrit: 'यद्यपि ➔ यदि + अपि', gujarati: 'જો કે / છતાં પણ (યણ્ સંધિ)' }
+        ],
+        mcqs: [
+          { q: "'सोऽपि' इत्यस्य सन्धिविच्छेदं कुरुत:", opts: ['स + अपि', 'सः + अपि', 'सो + अपि', 'सा + अपि'], ans: 1, exp: "અવગ્રહ આગળ ઓ હોય તો વિસર્ગ બને: सः + अपि." }
+        ]
+      },
+      {
+        id: 'samas',
+        title: 'સમાસ (Samas)',
+        sanskrit: 'समास-परिचयः',
+        desc: 'તત્પુરુષ, કર્મધારય, દ્વન્દ્વ, બહુવ્રીહિ, દ્વિગુ અને ઉપપદ સમાસ',
+        tricks: [
+          { title: '૧. દ્વન્દ્વ સમાસ (જોડકું)', badge: 'અને / ચ', desc: 'બે શબ્દો વચ્ચે "અને" (ચ) નો સંબંધ હોય. દા.ત. રામ-લક્ષ્મણ, માતા-પિતા.', formula: 'રામકૃષ્ણૌ ➔ રામઃ ચ કૃષ્ણઃ ચ' },
+          { title: '૨. ષષ્ઠી તત્પુરુષ સમાસ', badge: 'નો, ની, નું, ના', desc: 'વિગ્રહ કરતી વખતે વચ્ચે "નો, ની, નું, ના" આવે.', formula: 'રાજપુત્રઃ ➔ રાજાનો પુત્ર' },
+          { title: '૩. ઉપપદ સમાસ', badge: 'ક્રિયાપદ અંતે', desc: 'બીજો શબ્દ કોઈ ક્રિયા દર્શાવતો હોય (જેમ કે -જ્ઞ, -કાર, -દા). દા.ત. કુંભકારઃ.', formula: 'કુંભકારઃ, શાસ્ત્રજ્ઞઃ ➔ ઉપપદ સમાસ' }
+        ],
+        tables: [
+          {
+            title: 'સમાસ ઓળખ ચાર્ટ',
+            headers: ['સમાસ પ્રકાર', 'ઓળખ ચાવી (Golden Trick)', 'ઉદાહરણ'],
+            rows: [
+              ['ઇતરેતર દ્વન્દ્વ', 'બે પદો વચ્ચે <span class="suffix-hl">च</span> આવે', 'हस्तपादम्, रामकृष्णौ'],
+              ['ષષ્ઠી તત્પુરુષ', 'પહેલા પદમાં <span class="suffix-hl">षष्ठी</span> લોપ', 'राजपुरुषः, देवमन्दिरम्'],
+              ['કર્મધારય', 'વિશેષણ + <span class="suffix-hl">વિશેષ્ય</span>', 'महापुरुषः, नीलोत्पलम्'],
+              ['ઉપપદ સમાસ', 'અંતે ક્રિયાપદ પદ (<span class="suffix-hl">-कार, -ज्ञ</span>)', 'शास्त्रज्ञः, सुखदः'],
+              ['બહુવ્રીહિ સમાસ', 'બંને પદો ત્રીજા વ્યક્તિને દર્શાવે', 'पीताम्बरः, दशाननः']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'गंगाजलम् ➔ गंगायाः जलम्', gujarati: 'ગંગાનું પાણી (ષષ્ઠી તત્પુરુષ)' },
+          { sanskrit: 'सुखदुःखे ➔ सुखं च दुःखं च', gujarati: 'સુખ અને દુઃખ (ઇતરેતર દ્વન્દ્વ)' }
+        ],
+        mcqs: [
+          { q: "'रामलक्ष्मणौ' पदे कः समासः?", opts: ['द्वन्द्व समासः', 'तत्पुरुष समासः', 'कर्मधारय समासः', 'बहुव्रीहि समासः'], ans: 0, exp: "રામ અને લક્ષ્મણ બે નામનું જોડકું હોવાથી દ્વન્દ્વ સમાસ છે." },
+          { q: "'कुम्भकारः' पदस्य समास प्रकारः कः?", opts: ['द्विगु', 'उपपद तत्पुरुष', 'अव्ययीभाव', 'कर्मधारय'], ans: 1, exp: "અંતે 'કારઃ' હોવાથી ઉપપદ સમાસ છે." }
+        ]
+      },
+      {
+        id: 'upapad',
+        title: 'ઉપપદ વિભક્તિ (Upapad Vibhakti)',
+        sanskrit: 'उपपद-विभक्तिः',
+        desc: 'વિના, સહ, સાકમ્, પ્રતિ, અલમ્, નમઃ સાથે વપરાતી વિભક્તિઓના નિયમો',
+        tricks: [
+          { title: 'સહ / સાકમ્ / સાર્ધમ્ ➔ તૃતીયા', badge: 'સાથે (તૃતીયા)', desc: 'કોઈની સાથે જવાનો કે રહેવાનો અર્થ હોય ત્યારે તૃતીયા વિભક્તિ વપરાય.', formula: '____ + સહ/સાકમ્ ➔ તૃતીયા વિભક્તિ (રામેણ સહ)' },
+          { title: 'નમઃ / સ્વસ્તિ ➔ ચતુર્થી વિભક્તિ', badge: 'નમસ્કાર (ચતુર્થી)', desc: 'નમસ્કાર કરવાના હોય ત્યારે જેને નમસ્કાર થાય તેમાં ચતુર્થી વિભક્તિ આવે.', formula: '____ + नमः ➔ ચતુર્થી વિભક્તિ (शिवाय नमः)' }
+        ],
+        tables: [
+          {
+            title: 'અવ્યય અને સંબંધિત વિભક્તિ કોષ્ટક',
+            headers: ['અવ્યય પદ', 'જરૂરી વિભક્તિ', 'ગોલ્ડન ઉદાહરણ'],
+            rows: [
+              ['सह, साकम्, सार्धम्', 'તૃતીયા વિભક્તિ', 'मित्रेण <span class="suffix-hl">सह</span> गच्छति।'],
+              ['नमः, स्वस्ति', 'ચતુર્થી વિભક્તિ', 'श्रीगणेशाय <span class="suffix-hl">नमः</span>।'],
+              ['प्रति, उभयतः, परितः', 'દ્વિતીયા વિભક્તિ', 'नगरं <span class="suffix-hl">प्रति</span> धावति।'],
+              ['विना, ऋते', 'પંચમી / તૃતીયા', 'ज्ञानात् <span class="suffix-hl">ऋते</span> न मुक्तिः।']
+            ]
+          }
+        ],
+        examples: [
+          { sanskrit: 'रामेण सह सीता वनं गच्छति।', gujarati: 'રામ સાથે સીતા વનમાં જાય છે. (રામેણ = તૃતીયા)' },
+          { sanskrit: 'गुरवे नमः।', gujarati: 'ગુરુજીને નમસ્કાર હો. (ગુરવે = ચતુર્થી)' }
+        ],
+        mcqs: [
+          { q: "'____ नमः' - योग्यं रूपं चिनुत:", opts: ['शिवम्', 'शिवेन', 'शिवाय', 'शिवात्'], ans: 2, exp: "'नमः' સાથે ચતુર્થી વિભક્તિ વપરાય: शिवाय नमः." }
+        ]
+      }
+    ];
+
+    // POETRY CHAPTERS (પદ્ય)
+    const PADYA_CHAPTERS = [
+      {
+        chNum: 1,
+        title: '૧. સંવદધ્વમ્ (સાથે મળીને બોલો)',
+        sanskrit: 'संवदध्वम्',
+        intro: 'આ પદ્ય ઋગ્વેદ અને યજુર્વેદના સુપ્રસિદ્ધ મંત્રોમાંથી લેવામાં આવ્યું છે. તેમાં સમગ્ર માનવજાતને એક થઈને, મતભેદો ભૂલીને, પ્રેમ અને સહકારથી જીવવાનો પવિત્ર સંદેશ આપવામાં આવ્યો છે.',
+        shlokas: [
+          { num: 1, text: 'समगच्छध्वं संवदध्वं सं वो मनांसि जानताम्।\nदेवा भागं यथा पूर्वे सञ्जानाना उपासते॥', translation: 'તમે બધા સાથે ચાલો (એકમત બનો), સાથે બોલો અને તમારા બધાના મન એકસમાન બનો; જેમ પ્રાચીન કાળમાં દેવોએ યજ્ઞના ભાગને પ્રેમપૂર્વક સ્વીકાર્યો હતો.' },
+          { num: 2, text: 'सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।\nसर्वे भद्राणि पश्यन्तु मा कश्चिद् दुःखभाग्भवेत्॥', translation: 'બધા સુખી થાઓ, બધા નિરોગી બનો, બધા કલ્યાણકારી દ્રશ્યો જુઓ અને કોઈ પણ મનુષ્ય દુઃખી ન થાય.' }
+        ],
+        glossary: [
+          { word: 'संवदध्वम्', meaning: 'સાથે મળીને બોલો / સમાન વિચાર વ્યક્ત કરો' },
+          { word: 'निरामयाः', meaning: 'રોગ રહિત / સંપૂર્ણ સ્વસ્થ' },
+          { word: 'भद्राणि', meaning: 'કલ્યાણ / મંગલકારી બાબતો' }
+        ],
+        impQuestions: [
+          { q: "દેવોએ યજ્ઞનો ભાગ કેવી રીતે સ્વીકાર્યો હતો?", ans: "પ્રાચીન કાળમાં દેવોએ એકમત થઈને, વેરભાવ રાખ્યા વિના યજ્ઞના ભાગને પ્રેમપૂર્વક વહેંચીને સ્વીકાર્યો હતો.", tag: 'બોર્ડ IMP', year: 'March 2023 / 2024' }
+        ]
+      },
+      {
+        chNum: 4,
+        title: '૪. જનાર્દનસ્ય પશ્ચિમઃ સંદેશઃ',
+        sanskrit: 'जनार्दनस्य पश्चिमः सन्देशः',
+        intro: 'મહાકવિ ભાસ રચિત એકાંકી નાટક "દૂતઘટોત્કચ"માંથી લેવાયેલું પ્રકરણ. શ્રીકૃષ્ણ (જનાર્દન) ઘટોત્કચને દૂત બનાવીને દુર્યોધનને યુદ્ધ અટકાવવા છેલ્લો શાંતિ સંદેશ મોકલે છે.',
+        shlokas: [
+          { num: 1, text: 'घटोत्कचः - भो भो राजानः! श्रूयतां जनार्दनस्य पश्चिमः सन्देशः।\nधर्मं समाचर कुरु स्वजनव्यपेक्षां\nसूर्यांशुभिः सममुपैष्यति वः कृतान्तः॥', translation: 'ઘટોત્કચ: હે રાજાઓ! શ્રીકૃષ્ણનો અંતિમ સંદેશ સાંભળો: ધર્મનું આચરણ કરો, સ્વજનોની રક્ષા કરો; કારણ કે અર્જુનના રૂપમાં કાળ સૂર્યના કિરણો સાથે તમારા પ્રાણ લેવા આવશે!' }
+        ],
+        glossary: [
+          { word: 'जनार्दनस्य', meaning: 'શ્રીકૃષ્ણનો' },
+          { word: 'पश्चिमः', meaning: 'અંતિમ / છેલ્લો' },
+          { word: 'कृतान्तः', meaning: 'યમરાજ / કાળ' }
+        ],
+        impQuestions: [
+          { q: "શ્રીકૃષ્ણનો અંતિમ સંદેશ શું હતો?", ans: "ધર્મનું આચરણ કરો, સ્વજનોની ચિંતા કરો અને ઇચ્છાઓ પૂર્ણ કરો, કારણ કે અર્જુન રૂપી કાળ સૂર્યોદય સાથે તમારો નાશ કરશે.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'Board 2022, 2024' }
+        ]
+      },
+      {
+        chNum: 7,
+        title: '૭. સુભાષિતકુસુમમંજરી',
+        sanskrit: 'सुभाषितकुसुममञ्जरी',
+        intro: 'નીતિયુક્ત સુભાષિતો રૂપી પુષ્પોનો ગુલદસ્તો. સજ્જનોના વચનો પથ્થર પર કોતરેલા લેખ જેવા અવિચળ હોય છે.',
+        shlokas: [
+          { num: 1, text: 'यथा चतुर्भिः कनकं परीक्ष्यते निघर्षणच्छेदनतापताडनैः।\nतथा चतुर्भिः पुरुषः परीक्ष्यते श्रुतेन शीलेन कुलेन कर्मणा॥', translation: 'જેમ સોનાની કસોટી ઘસવાથી, કાપવાથી, તપાવવાથી અને ટીપવાથી થાય છે; તેમ પુરુષની પરીક્ષા જ્ઞાનથી, ચારિત્ર્યથી, કુળથી અને સત્કર્મથી થાય છે.' }
+        ],
+        glossary: [
+          { word: 'निघर्षण', meaning: 'ઘસવું / ઘસારો' },
+          { word: 'शीलेन', meaning: 'ચારિત્ર્ય વડે' }
+        ],
+        impQuestions: [
+          { q: "સુવર્ણ અને મનુષ્યની પરીક્ષા કઈ ચાર રીતે થાય છે?", ans: "સોનાની: ઘસવું, કાપવું, તપાવવું અને ટીપવું. મનુષ્યની: જ્ઞાન, શીલ, કુળ અને કર્મ.", tag: 'બોર્ડ IMP', year: 'વારંવાર પૂછાયેલ' }
+        ]
+      },
+      {
+        chNum: 10,
+        title: '૧૦. ત્વમેકા ભવાની',
+        sanskrit: 'त्वमेका भवानी',
+        intro: 'આદિ શંકરાચાર્ય રચિત સ્તોત્ર. જગદંબા ભવાની જ ભક્તનો એકમાત્ર સાચો આધાર છે.',
+        shlokas: [
+          { num: 1, text: 'न तातो न माता न बन्धुर्न दाता न पुत्रो न पुत्री न भृत्यो न भर्ता।\nगतिस्त्वं गतिस्त्वं त्वमेका भवानी॥', translation: 'મારે કોઈ પિતા, માતા, ભાઈ, પુત્ર, પત્ની કે વિદ્યા નથી; હે ભવાની માં! તું જ મારો એકમાત્ર આધાર છે!' }
+        ],
+        glossary: [
+          { word: 'तातो', meaning: 'પિતા' },
+          { word: 'गतिः', meaning: 'શરણ / આધાર' }
+        ],
+        impQuestions: [
+          { q: "ભક્ત ભવાની માતાને કઈ પરિસ્થિતિમાં રક્ષણ કરવા કહે છે?", ans: "વિપત્તિમાં, અજાણ્યા પ્રદેશમાં, પાણીમાં, અગ્નિમાં અને વનમાં સર્વત્ર પોતાની રક્ષા કરવા પ્રાર્થના કરે છે.", tag: 'શ્લોકપૂર્તિ & IMP', year: 'બોર્ડ ફેવરિટ' }
+        ]
+      },
+      {
+        chNum: 13,
+        title: '૧૩. ગીતામૃતમ્',
+        sanskrit: 'गीतामृतम्',
+        intro: 'શ્રીમદ્ ભગવદ્ ગીતાના અમૃત સમાન શ્લોકો: આત્માની અમરતા અને કર્મયોગ.',
+        shlokas: [
+          { num: 1, text: 'न जायते म्रियते वा कदाचिન્નાયં ભૂત્વા ભવિતા વા ન ભૂયઃ।\nअजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे॥', translation: 'આ આત્મા ક્યારેય જન્મતો નથી કે મરતો નથી. તે અજન્મા, નિત્ય, સનાતન છે. શરીર નાશ પામવા છતાં તે હણાતો નથી.' },
+          { num: 2, text: 'कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥', translation: 'તારો કર્મ કરવામાં જ અધિકાર છે, ફળ પર ક્યારેય નહિ.' }
+        ],
+        glossary: [
+          { word: 'अजः', meaning: 'અજન્મા' },
+          { word: 'शाश्वतः', meaning: 'હંમેશા રહેનારો' }
+        ],
+        impQuestions: [
+          { q: "આત્માના કયા લક્ષણો ગીતામાં વર્ણવ્યા છે?", ans: "આત્મા અજન્મા, નિત્ય, શાશ્વત અને પુરાતન છે. શસ્ત્રો તેને છેદી શકતા નથી કે અગ્નિ બાળી શકતો નથી.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'March 2020, 2023' }
+        ]
+      },
+      {
+        chNum: 16,
+        title: '૧૬. અદ્ભુતં યુદ્ધમ્',
+        sanskrit: 'अद्भुतं युद्धम्',
+        intro: 'વાલ્મીકિ રામાયણના અરણ્યકાંડમાંથી: વૃદ્ધ ગીધરાજ જટાયુ અને રાવણ વચ્ચેનું ભીષણ યુદ્ધ.',
+        shlokas: [
+          { num: 1, text: 'ततो पर्वतशृङ्गाभस्तीक्ष्णतुण्डः खगोत्तमः। वनस्पतिगतः श्रीमान् व्याजहार शुभां गिरम्॥', translation: 'પર્વતના શિખર જેવો વિશાળ દેહ ધરાવતા તીક્ષ્ણ ચાંચવાળા પક્ષીશ્રેષ્ઠ જટાયુએ કલ્યાણકારી વાણી ઉચ્ચારી.' }
+        ],
+        glossary: [
+          { word: 'तीक्ष्णतुण्डः', meaning: 'તીક્ષ્ણ ચાંચવાળો' },
+          { word: 'खगोत्तमः', meaning: 'પક્ષીઓમાં શ્રેષ્ઠ (જટાયુ)' }
+        ],
+        impQuestions: [
+          { q: "જટાયુએ રાવણને અધર્મ કરતાં કેવી રીતે રોક્યો?", ans: "પરસ્ત્રી હરણ અધર્મ છે તેમ સમજાવી જટાયુએ રાવણના રથ અને ધનુષ્યનો નાશ કર્યો.", tag: 'IMP પ્રશ્ન', year: 'Board 2023' }
+        ]
+      },
+      {
+        chNum: 20,
+        title: '૨૦. તથેવ તિષ્ઠતિ',
+        sanskrit: 'तथैव तिष्ठति',
+        intro: 'સમય જતાં વિદ્યા, વૃક્ષો અને જળ નાશ પામે છે, પરંતુ યજ્ઞ અને દાન અવિચળ રહે છે.',
+        shlokas: [
+          { num: 1, text: 'शिक्षा क्षयं गच्छति कालपर्ययात् सुबद्धमूला निपतन्ति पादपाः।\nजलं जलस्थानगतं च शुष्यति हुतं च दत्तं च तथैव तिष्ठति॥', translation: 'સમય જતાં વિદ્યા નાશ પામે છે, મજબૂત વૃક્ષો પડી જાય છે, પાણી સુકાઈ જાય છે; પરંતુ યજ્ઞ અને દાન તેમ જ અવિચળ રહે છે!' }
+        ],
+        glossary: [
+          { word: 'कालपर्ययात्', meaning: 'સમય વીતવાથી' },
+          { word: 'पादपाः', meaning: 'વૃક્ષો' }
+        ],
+        impQuestions: [
+          { q: "કાળ વીતતા કઈ બાબતો નષ્ટ થાય છે અને કઈ સ્થિર રહે છે?", ans: "વિદ્યા, વૃક્ષો અને જળ નાશ પામે છે; પરંતુ યજ્ઞ અને દાન હંમેશાં સ્થિર રહે છે.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'Board 2021, 2024' }
+        ]
+      }
+    ];
+
+    // PROSE & DRAMA (ગદ્ય & નાટ્ય)
+    const GADYA_CHAPTERS = [
+      {
+        chNum: 2,
+        title: '૨. યદ્ભવિષ્યતિ વિનશ્યતિ',
+        sanskrit: 'यद्भविष्यो विनश्यति',
+        intro: 'પંચતંત્રની ત્રણ માછલાંની વાર્તા: અનાગતવિધાતા, પ્રત્યુત્પન્નમતિ અને યદ્ભવિષ્ય.',
+        shlokas: [
+          { num: 1, text: 'पुरा एकस्मिन् जलाशये अनागतविधाता, प्रत्युत्पन्नमतिः, यद्भविष्यश्चेति त्रयो मत्स्याः अवसन्। धीवरैः उक्तम् - "अहो बहुमत्स्योऽयं ह्रदः! श्वः अत्रागम्य मत्स्यकूर्मादयो व्यापादयितव्याः॥"', translation: 'પૂર્વે એક સરોવરમાં અનાગતવિધાતા, પ્રત્યુત્પન્નમતિ અને યદ્ભવિષ્ય ત્રણ માછલાં રહેતા હતા. માછીમારોએ કહ્યું - "આ સરોવરમાં ઘણા માછલાં છે, કાલે આવીને મારી નાખીશું."' }
+        ],
+        glossary: [{ word: 'धीवरैः', meaning: 'માછીમારો' }, { word: 'व्यापादयितव्याः', meaning: 'મારી નાખવા જોઈએ' }],
+        impQuestions: [{ q: "માછીમારોએ શું વિચાર્યું?", ans: "કાલે સવારે આવીને બધા માછલાં અને કાચબાને પકડી મારી નાખીશું.", tag: 'બોર્ડ IMP', year: 'March 2022' }]
+      },
+      {
+        chNum: 3,
+        title: '૩. સ્વસ્થવૃત્તં સમાચર',
+        sanskrit: 'स्वस्थवृत्तं समाचर',
+        intro: 'ચરકસંહિતા આધારિત આદર્શ દિનચર્યા: વહેલા ઊઠવું, ઈશ્વર સ્મરણ, વ્યાયામ અને સ્નાન.',
+        shlokas: [
+          { num: 1, text: 'बाल! उत्तिष्ठ शय्यातः स्वस्थवृत्तं समाचर। स्मर नारायणं देवं ततः शुद्धं जलं पिब॥', translation: 'હે બાળક! પથારીમાંથી ઊઠ, સ્વસ્થ આચરણ કર. નારાયણ દેવનું સ્મરણ કર અને શુદ્ધ પાણી પી.' }
+        ],
+        glossary: [{ word: 'शय्यातः', meaning: 'પથારીમાંથી' }, { word: 'फेनिलेन', meaning: 'સાબુ વડે' }],
+        impQuestions: [{ q: "સવારે બાળકે શું કરવું જોઈએ?", ans: "ઈશ્વર સ્મરણ, જળપાન, શૌચ, સાબુથી હાથ સાફ કરી વ્યાયામ અને સ્નાન કરવું.", tag: 'બોર્ડ IMP', year: 'Board 2023' }]
+      },
+      {
+        chNum: 5,
+        title: '૫. ગુણવતી કન્યા',
+        sanskrit: 'गुणवती कन्या',
+        intro: 'શક્તિકુમારે એક પ્રસ્થ ડાંગરમાંથી સ્વાદિષ્ટ ભોજન બનાવનાર ગુણવતી કન્યા સાથે લગ્ન કર્યા.',
+        shlokas: [
+          { num: 1, text: 'कांचीनगरे शक्तिशुमारो नाम श्रेष्ठीपुत्रः प्रतिवसति स्म। स चिन्तामापन्नः - "कथं गुणवतीं भार्यां विन्देयम्?"', translation: 'કાંચીનગરમાં શક્તિકુમાર નામનો શેઠપુત્ર રહેતો હતો. તેને ચિંતા થઈ કે હું ગુણવાન પત્ની કેવી રીતે મેળવું?' }
+        ],
+        glossary: [{ word: 'प्रस्थमात्रम्', meaning: 'એક પ્રસ્થ (માપ)' }, { word: 'तुषान्', meaning: 'ફોતરાં' }],
+        impQuestions: [{ q: "કન્યાએ ડાંગરમાંથી ભોજન કેવી રીતે બનાવ્યું?", ans: "ડાંગર ખાંડી ચોખા કાઢ્યા, ફોતરાં વેચી લાકડાં લાવ્યા અને વિવિધ વાનગીઓ બનાવી.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'March 2024' }]
+      },
+      {
+        chNum: 6,
+        title: '૬. કાષ્ઠખંડઃ (લાકડાનો ટુકડો)',
+        sanskrit: 'काष्ठखण्डः',
+        intro: 'ગંગા કિનારે ગુરુ શિષ્યને લાકડાના ટુકડા દ્વારા સંસાર સાગર પાર કરવાના ૪ વિઘ્નો સમજાવે છે.',
+        shlokas: [
+          { num: 1, text: 'गुरुः शिष्यम् आह - "अयं काष्ठखण्डः समुद्रं प्राप्स्यति, यदि तीरे संलग्‍नता, भाराधिक्येन निमग्‍नता, आवर्तपातता, नदीजलवियोगश्चेति चत्वारो विघ्‍ना न भवेयुः!"', translation: 'ગુરુએ કહ્યું - આ લાકડાનો ટુકડો સમુદ્ર સુધી પહોંચશે જો ૪ વિઘ્નો ન આવે તો.' }
+        ],
+        glossary: [{ word: 'आवर्तपातता', meaning: 'વમળમાં પડવું' }, { word: 'निमग्‍नता', meaning: 'ડૂબી જવું' }],
+        impQuestions: [{ q: "સંસાર સમુદ્ર પાર કરવાના ૪ વિઘ્નો કયા છે?", ans: "૧. આહાર-નિદ્રામાં આસક્તિ, ૨. સામાજિક ભારથી ડૂબવું, ૩. વ્યસન રૂપી વમળ, ૪. પરિવારથી વિયોગ.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'Board 2024' }]
+      },
+      {
+        chNum: 8,
+        title: '૮. સાક્ષીભૂતઃ મનુષ્યઃ',
+        sanskrit: 'साक्षीभूतः मनुष्यः',
+        intro: 'માર્ગ અકસ્માતના સાક્ષી બનેલા માણસના ૩ કર્તવ્યો: દુઃખની અનુભૂતિ, દર્દીની સેવા, બોધપાઠ લેવો.',
+        shlokas: [
+          { num: 1, text: 'पुनीतः - भ्रातः! मार्गे दुर्घटनायाः प्रस्तरादयः अचेतनाः, पशवः, मनुष्याश्चेति त्रयः साक्षिणः भवन्ति।', translation: 'પુનીત: માર્ગમાં અકસ્માતના પથ્થર જેવા જડ પદાર્થો, પશુઓ અને મનુષ્યો ૩ સાક્ષી બને છે.' }
+        ],
+        glossary: [{ word: 'साक्षीभूतः', meaning: 'સાક્ષી બનેલો' }, { word: 'औषधालयम्', meaning: 'દવાખાનું' }],
+        impQuestions: [{ q: "માણસના ૩ કર્તવ્યો કયા છે?", ans: "દુઃખ અનુભવવું, દવાખાને પહોંચાડી રક્ત આપવું અને અકસ્માતમાંથી બોધપાઠ લેવો.", tag: 'બોર્ડ IMP', year: 'Board 2023' }]
+      },
+      {
+        chNum: 9,
+        title: '૯. ચક્ષુષ્માન્ અંધ એવ',
+        sanskrit: 'चक्षुष्मान् अन्ध एव',
+        intro: 'બાણભટ્ટ રચિત હર્ષચરિત: બ્રહ્માજી ક્રોધિત દુર્વાસાને ક્રોધના દુષ્પરિણામ સમજાવે છે.',
+        shlokas: [
+          { num: 1, text: 'ब्रह्मोवाच - न हि कोपविप्लुतविमर्शा मतिः क्षमते मलं पश्यितुम्। कोपेन हि विनश्यति सर्वं तपः।', translation: 'બ્રહ્માજીએ કહ્યું: ક્રોધથી ડહોળાયેલી બુદ્ધિ સાચું જોઈ શકતી નથી. ક્રોધથી બધું તપ નાશ પામે છે.' }
+        ],
+        glossary: [{ word: 'कोपविप्लुत', meaning: 'ક્રોધાવિષ્ટ' }, { word: 'चक्षुष्मान्', meaning: 'આંખોવાળો' }],
+        impQuestions: [{ q: "ક્રોધ થવાથી શું થાય છે?", ans: "બુદ્ધિ અંધકારમય બને છે, આંખો લાલ થાય છે, તપ ગળી જાય છે અને અપયશ ફેલાય છે.", tag: 'બોર્ડ IMP', year: 'March 2020' }]
+      },
+      {
+        chNum: 11,
+        title: '૧૧. યસ્ય જનનં તસ્ય મરણમ્',
+        sanskrit: 'यस्य जननं तस्य मरणम्',
+        intro: 'લોભી વિત્તદાસ અને ચતુર કૂટનાથની વાર્તા: જેનો જન્મ થાય તેનું મરણ નિશ્ચિત છે.',
+        shlokas: [
+          { num: 1, text: 'अस्ति वित्तिदासो नाम वणिक्पुत्रः। प्रातिवेशिकः कूटनाथः अचिन्तयत् - "लुब्धोऽयं मया वञ्चनीयः।"', translation: 'વિત્તદાસ નામનો ધનવાન વાણિયો હતો. પાડોશી કૂટનાથે વિચાર્યું કે આ લોભીને છેતરવો જોઈએ.' }
+        ],
+        glossary: [{ word: 'लुब्धः', meaning: 'લોભી' }, { word: 'प्रातिवेशिकः', meaning: 'પાડોશી' }],
+        impQuestions: [{ q: "કૂટનાથે વિત્તદાસને કેવી રીતે છેતર્યો?", ans: "પહેલાં વાસણોનો જન્મ થયો કહી નાના વાસણ આપ્યા, પછી બધા વાસણો મરી ગયા કહી પાછા ન આપ્યા!", tag: 'બોર્ડ મોસ્ટ IMP', year: 'Board 2024' }]
+      },
+      {
+        chNum: 12,
+        title: '૧૨. કલિકાલસર્વજ્ઞઃ હેમચંદ્રાચાર્યઃ',
+        sanskrit: 'कलिकालसर्वज्ञः हेमचन्द्राचार्यः',
+        intro: 'સિદ્ધરાજ જયસિંહ અને હેમચંદ્રાચાર્ય દ્વારા "સિદ્ધહેમશબ્દાનુશાસનમ્" વ્યાકરણ ગ્રંથની રચના.',
+        shlokas: [
+          { num: 1, text: 'सिद्धराजः जयसिंहः मालवविजयं कृतवान્। भोजस्य सरस्वतीकण्ठाभरणं दृष्ट्वा सः हेमचन्द्राचार्यं व्याकरणग्रन्थं रचयितुं प्रार्थितवान્।', translation: 'સિદ્ધરાજે માળવા પર વિજય મેળવી હેમચંદ્રાચાર્યને નવો વ્યાકરણ ગ્રંથ રચવા વિનંતી કરી.' }
+        ],
+        glossary: [{ word: 'कलिकालसर्वज्ञः', meaning: 'બધું જ જાણનારા' }, { word: 'मालवविजयम्', meaning: 'માળવા પર વિજય' }],
+        impQuestions: [{ q: "હેમચંદ્રાચાર્યના મુખ્ય ગ્રંથો કયા છે?", ans: "સિદ્ધહેમશબ્દાનુશાસનમ્, અભિધાનચિંતામણિ, કાવ્યાનુશાસન અને પ્રમાણમીમાંસા.", tag: 'બોર્ડ IMP', year: 'Board 2022' }]
+      },
+      {
+        chNum: 14,
+        title: '૧૪. કઃ ઇદમ્ દુષ્કરં કુર્યાત્',
+        sanskrit: 'कः इदं दुष्करं कुर्यात्',
+        intro: 'મુદ્રારાક્ષસ નાટક: ચંદનદાસે પોતાના પ્રાણ આપીને પણ મિત્ર અમાત્ય રાક્ષસના પરિવારની રક્ષા કરી.',
+        shlokas: [
+          { num: 1, text: 'चाणक्यः - श्रेष्ठिन् चन्दनदास! नन्दस्य अमात्यराक्षसस्य गृहजनः त्वया रक्ष्यते?', translation: 'ચાણક્ય: શેઠ ચંદનદાસ! શું અમાત્ય રાક્ષસના કુટુંબનું તમારા દ્વારા રક્ષણ થાય છે?' }
+        ],
+        glossary: [{ word: 'दुष्करम्', meaning: 'અતિ કપરું' }, { word: 'श्रेष्ठिन्', meaning: 'નગરશેઠ' }],
+        impQuestions: [{ q: "ચાણક્યે ચંદનદાસની પ્રશંસા કેમ કરી?", ans: "કારણ કે મૃત્યુદંડની સામે પણ તેણે મિત્રના પરિવારને સોંપવાનો ઇનકાર કર્યો.", tag: 'બોર્ડ IMP', year: 'Board 2021' }]
+      },
+      {
+        chNum: 15,
+        title: '૧૫. જયઃ પરાજયો વા',
+        sanskrit: 'जयः पराजयो वा',
+        intro: 'અર્જુન પૃથ્વી પર આવી આધુનિક અણુ યુદ્ધોના ભયંકર પ્રદૂષણ અને દર્દ જોઈ વિજયને પણ પરાજય ગણે છે.',
+        shlokas: [
+          { num: 1, text: 'अर्जुनः भूलोकं दृष्ट्वा एकं भग्‍नदन्तं धवलकेशं कृशकायं युवकं दृष्टवान्। विषाक्तजलेन सः रुग्णः जातः।', translation: 'અર્જુને તૂટેલા દાંતવાળા, સફેદ વાળવાળા રોગી યુવાનને જોયો જે ઝેરી પાણીથી અશક્ત બન્યો હતો.' }
+        ],
+        glossary: [{ word: 'विषाक्तम्', meaning: 'ઝેરી' }, { word: 'भग्‍नदन्तम्', meaning: 'તૂટેલા દાંતવાળો' }],
+        impQuestions: [{ q: "પ્રાચીન અને આધુનિક યુદ્ધ વચ્ચે શું તફાવત છે?", ans: "પ્રાચીન યુદ્ધમાં પ્રકૃતિ શુદ્ધ રહેતી, જ્યારે આધુનિક યુદ્ધોમાં પંચમહાભૂત ઝેરી બને છે.", tag: 'બોર્ડ મોસ્ટ IMP', year: 'Board 2024' }]
+      },
+      {
+        chNum: 17,
+        title: '૧૭. સ્વાભાવિકં સાદૃશ્યમ્',
+        sanskrit: 'स्वाभाविकं सादृश्यम्',
+        intro: 'પતંજલિ મહાભાષ્ય: સંસારમાં સરખા ગુણવાળા પદાર્થો આકર્ષાય છે (માટીનો ઢેફો પૃથ્વી પર જ પડે છે).',
+        shlokas: [
+          { num: 1, text: 'लोष्टः क्षिप्तः बहुवेगं गत्वापि पुनः पृथिवीमेव आगच्छति, यतोहि स पृथिव्याः विकारः अस्ति।', translation: 'માટીનો ઢેફો આકાશમાં ફેંકવા છતાં પૃથ્વી પર જ પાછો આવે છે કારણ કે તે પૃથ્વીનો જ અંશ છે.' }
+        ],
+        glossary: [{ word: 'लोष्टः', meaning: 'માટીનો ઢેફો' }, { word: 'सादृश्यम्', meaning: 'સમાનતા' }],
+        impQuestions: [{ q: "માટીનો ઢેફો ક્યાં પડે છે અને શા માટે?", ans: "પૃથ્વીનો અંશ હોવાથી તે પાછો પૃથ્વી પર જ પડે છે.", tag: 'બોર્ડ IMP', year: 'March 2022' }]
+      },
+      {
+        chNum: 18,
+        title: '૧૮. મુક્તાનિ મુક્તકાનિ',
+        sanskrit: 'मुक्तानि मुक्तकानि',
+        intro: 'સંસ્કૃત સાહિત્યના મોતી જેવા રમૂજી સુભાષિતો અને પ્રહેલિકાઓ.',
+        shlokas: [
+          { num: 1, text: 'कमले कुसुमे यः वसति स कः? उत्तरम् - भ्रमरः (ભમરો)', translation: 'કમળના પુષ્પમાં કોણ વસે છે? સાચો ઉત્તર: ભમરો.' }
+        ],
+        glossary: [{ word: 'मुक्तकम्', meaning: 'છૂટું સુભાષિત' }, { word: 'भ्रमरः', meaning: 'ભમરો' }],
+        impQuestions: [{ q: "મુક્તક સુભાષિતોની શી વિશેષતા છે?", ans: "તે પૂર્વાપર સંદર્ભ વગર પણ ઊંડો બોધ આપે છે.", tag: 'IMP પ્રશ્ન', year: 'Board 2021' }]
+      },
+      {
+        chNum: 19,
+        title: '૧૯. સત્યં મયૂરઃ (સાચે જ મોર છે!)',
+        sanskrit: 'सत्यं मयूरः',
+        intro: 'ભગવદજ્જુકિયમ્ પ્રહસન: ડરપોક શાંડિલ્ય વાઘના ડરથી આંખો મીંચીને મોરને પણ વાઘ સમજી બેસે છે.',
+        shlokas: [
+          { num: 1, text: 'शाण्डिल्यः - अविहा! व्याघ्रेण गृहीतोऽस्मि! परिव्राजकः - मयूरः खलु एषः! शाण्डिल्यः - सत्यं मयूरः? तर्हि उद्घाटयामि चक्षुषी!', translation: 'શાંડિલ્ય: મને વાઘે પકડ્યો! સંન્યાસી: આ તો મોર છે! શાંડિલ્ય: જો મોર હોય તો આંખો ખોલું!' }
+        ],
+        glossary: [{ word: 'परिव्राजकः', meaning: 'સંન્યાસી' }, { word: 'उद्घाटयामि', meaning: 'ખોલું છું' }],
+        impQuestions: [{ q: "શાંડિલ્ય બગીચામાં કેમ ડરતો હતો?", ans: "માતાએ કહ્યું હતું કે ઝાડ પાછળ વાઘ છુપાયેલો છે, તેથી તે મોરથી પણ ડરી ગયો.", tag: 'હાસ્યરસ IMP', year: 'Board 2022' }]
+      }
+    ];
+
+    // UI CONTROLLER FUNCTIONS
+    window.addEventListener('DOMContentLoaded', () => {
+      renderHomeList();
+    });
+
+    function switchCategory(cat) {
+      APP_STATE.currentCategory = cat;
+      document.getElementById('tabVyakarana').classList.toggle('active', cat === 'vyakarana');
+      document.getElementById('tabPadya').classList.toggle('active', cat === 'padya');
+      document.getElementById('tabGadya').classList.toggle('active', cat === 'gadya');
+      renderHomeList();
+    }
+
+    function goHome() {
+      APP_STATE.activeItem = null;
+      document.getElementById('homeView').classList.remove('hidden');
+      document.getElementById('detailView').classList.add('hidden');
+      document.getElementById('backBtn').classList.add('hidden');
+      document.getElementById('headerTitle').textContent = 'સંસ્કૃત સાધના';
+      document.getElementById('headerSubtitle').textContent = 'GSEB ધોરણ 10 અભ્યાસક્રમ';
+    }
+
+    function openDetail(id, type) {
+      APP_STATE.activeSubTab = 0;
+      APP_STATE.activeTableIndex = 0;
+      if (type === 'vyakarana') {
+        const item = GRAMMAR_TOPICS.find(g => g.id === id);
+        if (!item) return;
+        APP_STATE.activeItem = { ...item, type: 'vyakarana' };
+        renderGrammarDetail();
+      } else {
+        const list = type === 'padya' ? PADYA_CHAPTERS : GADYA_CHAPTERS;
+        const item = list.find(c => c.chNum === id);
+        if (!item) return;
+        APP_STATE.activeItem = { ...item, type };
+        renderLiteratureDetail();
+      }
+
+      document.getElementById('homeView').classList.add('hidden');
+      document.getElementById('detailView').classList.remove('hidden');
+      document.getElementById('backBtn').classList.remove('hidden');
+      document.getElementById('headerTitle').textContent = APP_STATE.activeItem.title;
+      document.getElementById('headerSubtitle').textContent = APP_STATE.activeItem.sanskrit;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderHomeList() {
+      const container = document.getElementById('itemsContainer');
+      const q = APP_STATE.searchQuery.toLowerCase().trim();
+      let html = '';
+
+      if (APP_STATE.currentCategory === 'vyakarana') {
+        const items = GRAMMAR_TOPICS.filter(g => 
+          !q || g.title.toLowerCase().includes(q) || g.sanskrit.includes(q) || g.desc.toLowerCase().includes(q)
+        );
+        if (items.length === 0) {
+          html = '<div style="text-align:center; padding:30px; color:#94a3b8;">કોઈ વ્યાકરણ ટોપિક મળ્યો નથી.</div>';
+        } else {
+          items.forEach((item, index) => {
+            html += `
+              <div class="item-card" onclick="openDetail('${item.id}', 'vyakarana')">
+                <div class="item-card-left">
+                  <div class="item-badge">${index + 1}</div>
+                  <div style="min-width:0;">
+                    <div class="item-title">${item.title}</div>
+                    <div class="item-sanskrit">${item.sanskrit}</div>
+                    <div class="item-desc">${item.desc}</div>
+                  </div>
+                </div>
+                <div class="item-arrow">➔</div>
+              </div>
+            `;
+          });
+        }
+      } else if (APP_STATE.currentCategory === 'padya') {
+        const items = PADYA_CHAPTERS.filter(c => 
+          !q || c.title.toLowerCase().includes(q) || c.sanskrit.includes(q) || c.intro.toLowerCase().includes(q)
+        );
+        if (items.length === 0) {
+          html = '<div style="text-align:center; padding:30px; color:#94a3b8;">કોઈ પદ્ય મળ્યું નથી.</div>';
+        } else {
+          items.forEach(c => {
+            html += `
+              <div class="item-card" onclick="openDetail(${c.chNum}, 'padya')">
+                <div class="item-card-left">
+                  <div class="item-badge" style="color:#38bdf8; background:rgba(56, 189, 248, 0.12); border-color:rgba(56, 189, 248, 0.25);">Ch ${c.chNum}</div>
+                  <div style="min-width:0;">
+                    <div class="item-title">${c.title}</div>
+                    <div class="item-sanskrit">${c.sanskrit}</div>
+                    <div class="item-desc">શ્લોકો, અન્વય, શબ્દાર્થ અને બોર્ડ IMP</div>
+                  </div>
+                </div>
+                <div class="item-arrow">➔</div>
+              </div>
+            `;
+          });
+        }
+      } else {
+        const items = GADYA_CHAPTERS.filter(c => 
+          !q || c.title.toLowerCase().includes(q) || c.sanskrit.includes(q) || c.intro.toLowerCase().includes(q)
+        );
+        if (items.length === 0) {
+          html = '<div style="text-align:center; padding:30px; color:#94a3b8;">કોઈ પાઠ કે નાટ્ય મળ્યું નથી.</div>';
+        } else {
+          items.forEach(c => {
+            html += `
+              <div class="item-card" onclick="openDetail(${c.chNum}, 'gadya')">
+                <div class="item-card-left">
+                  <div class="item-badge" style="color:#10b981; background:rgba(16, 185, 129, 0.12); border-color:rgba(16, 185, 129, 0.25);">Ch ${c.chNum}</div>
+                  <div style="min-width:0;">
+                    <div class="item-title">${c.title}</div>
+                    <div class="item-sanskrit">${c.sanskrit}</div>
+                    <div class="item-desc">ગદ્યખંડ, સરળ કથાસાર, અનુવાદ અને પ્રશ્નોત્તરી</div>
+                  </div>
+                </div>
+                <div class="item-arrow">➔</div>
+              </div>
+            `;
+          });
+        }
+      }
+
+      container.innerHTML = html;
+    }
+
+    function handleSearch() {
+      APP_STATE.searchQuery = document.getElementById('searchInput').value;
+      renderHomeList();
+    }
+
+    function setSubTab(index) {
+      APP_STATE.activeSubTab = index;
+      const tabs = document.querySelectorAll('.sub-tab-btn');
+      tabs.forEach((t, i) => t.classList.toggle('active', i === index));
+
+      if (APP_STATE.activeItem.type === 'vyakarana') {
+        renderGrammarContent();
+      } else {
+        renderLiteratureContent();
+      }
+    }
+
+    function renderGrammarDetail() {
+      const subTabsBar = document.getElementById('subTabsBar');
+      const tabs = ['શોર્ટકટ ટ્રીક', 'કોષ્ટકો (પ્રત્યયો)', 'ઉદાહરણો', 'MCQ ટેસ્ટ'];
+      subTabsBar.innerHTML = tabs.map((tab, idx) => `
+        <button class="sub-tab-btn ${idx === APP_STATE.activeSubTab ? 'active' : ''}" onclick="setSubTab(${idx})">${tab}</button>
+      `).join('');
+
+      renderGrammarContent();
+    }
+
+    function switchTableIndex(idx) {
+      APP_STATE.activeTableIndex = idx;
+      renderGrammarContent();
+    }
+
+    function renderGrammarContent() {
+      const item = APP_STATE.activeItem;
+      const area = document.getElementById('tabContentArea');
+
+      if (APP_STATE.activeSubTab === 0) {
+        let html = `<div class="content-box"><div class="box-title">⚡ સરળ યાદ રાખવાની ટ્રીક્સ</div>`;
+        item.tricks.forEach(t => {
+          html += `
+            <div class="trick-card">
+              <div class="trick-title"><span class="trick-badge">${t.badge}</span> ${t.title}</div>
+              <div class="trick-desc">${t.desc}</div>
+              <div class="trick-formula">${t.formula}</div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        area.innerHTML = html;
+      } else if (APP_STATE.activeSubTab === 1) {
+        let html = `
+          <div class="content-box">
+            <div class="box-title">📊 વિભક્તિ અને પ્રત્યય કોષ્ટકો (Neon Gold હાઇલાઇટ)</div>
+            <p style="font-size:12px; color:#cbd5e1; margin-bottom:10px;">
+              શિક્ષણ અને પુનરાવર્તન સરળ બનાવવા માટે દરેક શબ્દરૂપના મુખ્ય પ્રત્યયોને <span class="suffix-hl">ગોલ્ડન હાઇલાઇટ</span> કરેલ છે.
+            </p>
+        `;
+        if (item.tables && item.tables.length > 1) {
+          const currentTblIdx = (APP_STATE.activeTableIndex !== undefined) ? APP_STATE.activeTableIndex : 0;
+          html += `
+            <div class="table-selector-nav">
+              <button class="table-selector-chip ${currentTblIdx === -1 ? 'active' : ''}" onclick="switchTableIndex(-1)">બધા કોષ્ટકો (All)</button>
+              ${item.tables.map((tbl, tIdx) => `
+                <button class="table-selector-chip ${currentTblIdx === tIdx ? 'active' : ''}" onclick="switchTableIndex(${tIdx})">
+                  ${tbl.shortName || tbl.title.split(' ')[0]}
+                </button>
+              `).join('')}
+            </div>
+          `;
+
+          const tablesToShow = currentTblIdx === -1 ? item.tables : [item.tables[currentTblIdx] || item.tables[0]];
+          tablesToShow.forEach(tbl => {
+            html += `
+              <div style="font-size:13px; font-weight:700; color:#fbbf24; margin:12px 0 6px 0;">${tbl.title}</div>
+              <div class="table-container">
+                <table class="sanskrit-table">
+                  <thead>
+                    <tr>${tbl.headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                  </thead>
+                  <tbody>
+                    ${tbl.rows.map(r => `<tr>${r.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}
+                  </tbody>
+                </table>
+              </div>
+            `;
+          });
+        } else {
+          item.tables.forEach(tbl => {
+            html += `
+              <div style="font-size:13px; font-weight:700; color:#fbbf24; margin:12px 0 6px 0;">${tbl.title}</div>
+              <div class="table-container">
+                <table class="sanskrit-table">
+                  <thead>
+                    <tr>${tbl.headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                  </thead>
+                  <tbody>
+                    ${tbl.rows.map(r => `<tr>${r.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}
+                  </tbody>
+                </table>
+              </div>
+            `;
+          });
+        }
+        html += `</div>`;
+        area.innerHTML = html;
+      } else if (APP_STATE.activeSubTab === 2) {
+        let html = `<div class="content-box"><div class="box-title">📖 બોર્ડ પરીક્ષાના મહત્વના ઉદાહરણો</div>`;
+        item.examples.forEach((ex, idx) => {
+          html += `
+            <div class="shloka-block">
+              <span class="shloka-num">ઉદાહરણ ${idx + 1}</span>
+              <div class="sanskrit-text">${ex.sanskrit}</div>
+              <div class="gujarati-trans">${ex.gujarati}</div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        area.innerHTML = html;
+      } else {
+        renderMcqSection();
+      }
+    }
+
+    function renderLiteratureDetail() {
+      const subTabsBar = document.getElementById('subTabsBar');
+      const tabs = ['પ્રસ્તાવના અને કથાસાર', 'શ્લોક / અનુવાદ', 'શબ્દાર્થ', 'બોર્ડ IMP પ્રશ્નો'];
+      subTabsBar.innerHTML = tabs.map((tab, idx) => `
+        <button class="sub-tab-btn ${idx === APP_STATE.activeSubTab ? 'active' : ''}" onclick="setSubTab(${idx})">${tab}</button>
+      `).join('');
+
+      renderLiteratureContent();
+    }
+
+    function renderLiteratureContent() {
+      const item = APP_STATE.activeItem;
+      const area = document.getElementById('tabContentArea');
+
+      if (APP_STATE.activeSubTab === 0) {
+        area.innerHTML = `
+          <div class="content-box">
+            <div class="box-title">📜 પ્રકરણ પ્રસ્તાવના અને સારાંશ</div>
+            <div style="font-size:13.5px; line-height:1.75; color:#e2e8f0; white-space:pre-line;">
+              ${item.intro}
+            </div>
+          </div>
+        `;
+      } else if (APP_STATE.activeSubTab === 1) {
+        let html = `<div class="content-box"><div class="box-title">📖 સંસ્કૃત મૂળ પાઠ અને ગુજરાતી અનુવાદ</div>`;
+        item.shlokas.forEach(s => {
+          html += `
+            <div class="shloka-block">
+              <span class="shloka-num">શ્લોક / ગદ્યખંડ ${s.num}</span>
+              <div class="sanskrit-text" style="white-space:pre-line;">${s.text}</div>
+              <div class="gujarati-trans">
+                <div style="font-size:11px; color:#38bdf8; font-weight:700; margin-bottom:4px;">ગુજરાતી અનુવાદ:</div>
+                ${s.translation}
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        area.innerHTML = html;
+      } else if (APP_STATE.activeSubTab === 2) {
+        let html = `
+          <div class="content-box">
+            <div class="box-title">📚 અઘરા સંસ્કૃત શબ્દો અને ટિપ્પણી</div>
+            <div style="display:flex; flex-direction:column;">
+        `;
+        item.glossary.forEach(w => {
+          html += `
+            <div class="word-item">
+              <span class="word-sanskrit">${w.word}</span>
+              <span class="word-meaning">${w.meaning}</span>
+            </div>
+          `;
+        });
+        html += `</div></div>`;
+        area.innerHTML = html;
+      } else {
+        let html = `<div class="content-box"><div class="box-title">🎯 બોર્ડ પરીક્ષાના મહત્વના પ્રશ્નોત્તરી</div>`;
+        item.impQuestions.forEach(q => {
+          html += `
+            <div class="imp-card">
+              <div class="imp-header">
+                <span class="imp-tag">${q.tag}</span>
+                <span class="imp-year">${q.year}</span>
+              </div>
+              <div class="imp-q">${q.q}</div>
+              <div class="imp-ans">${q.ans}</div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        area.innerHTML = html;
+      }
+    }
+
+    function renderMcqSection() {
+      const item = APP_STATE.activeItem;
+      const area = document.getElementById('tabContentArea');
+
+      const customList = APP_STATE.userCustomMcqs[item.id] || [];
+      const allMcqs = [...item.mcqs, ...customList];
+      APP_STATE.activeQuizMcqs = allMcqs;
+
+      let html = `
+        <div class="content-box">
+          <div class="quiz-tools">
+            <button class="btn-primary" onclick="openMcqModal()">+ નવો MCQ ઉમેરો</button>
+            <button class="btn-secondary" onclick="generateAutoQuiz()">⚡ Auto Quiz Maker</button>
+          </div>
+          <div class="box-title">📝 સ્વ-મૂલ્યાંકન MCQ ટેસ્ટ (${allMcqs.length} પ્રશ્નો)</div>
+      `;
+
+      allMcqs.forEach((mcq, qIdx) => {
+        html += `
+          <div class="quiz-card" id="quizCard_${qIdx}">
+            <div class="quiz-q">${qIdx + 1}. ${mcq.q}</div>
+            <div class="quiz-options">
+              ${mcq.opts.map((opt, oIdx) => `
+                <button class="quiz-opt-btn" onclick="handleSelectQuizOption(${qIdx}, ${oIdx})">
+                  ${String.fromCharCode(65 + oIdx)}. ${opt}
+                </button>
+              `).join('')}
+            </div>
+            <div class="quiz-feedback" id="feedback_${qIdx}"></div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      area.innerHTML = html;
+    }
+
+    function handleSelectQuizOption(qIdx, selectedIdx) {
+      const mcq = APP_STATE.activeQuizMcqs ? APP_STATE.activeQuizMcqs[qIdx] : null;
+      if (!mcq) return;
+
+      const card = document.getElementById(`quizCard_${qIdx}`);
+      if (!card) return;
+      const buttons = card.querySelectorAll('.quiz-opt-btn');
+      const feedback = document.getElementById(`feedback_${qIdx}`);
+      const correctIdx = mcq.ans;
+
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === correctIdx) {
+          btn.classList.add('correct');
+        }
+        if (idx === selectedIdx && selectedIdx !== correctIdx) {
+          btn.classList.add('wrong');
+        }
+      });
+
+      feedback.classList.add('show');
+      const expHtml = mcq.exp ? `<br><small style="color:#94a3b8; margin-top:4px; display:block;">💡 સમજૂતી: ${mcq.exp}</small>` : '';
+
+      if (selectedIdx === correctIdx) {
+        feedback.style.background = 'rgba(16, 185, 129, 0.15)';
+        feedback.style.color = '#6ee7b7';
+        feedback.innerHTML = `✓ સાચો જવાબ! ${expHtml}`;
+      } else {
+        feedback.style.background = 'rgba(244, 63, 94, 0.15)';
+        feedback.style.color = '#fda4af';
+        feedback.innerHTML = `✗ ખોટો જવાબ! સાચો વિકલ્પ: <b>${String.fromCharCode(65 + correctIdx)}. ${mcq.opts[correctIdx]}</b> ${expHtml}`;
+      }
+    }
+
+    // Alias for compatibility
+    function checkAnswer(qIdx, selectedIdx) {
+      handleSelectQuizOption(qIdx, selectedIdx);
+    }
+
+    function generateAutoQuiz() {
+      const item = APP_STATE.activeItem;
+      const customList = APP_STATE.userCustomMcqs[item.id] || [];
+      const allMcqs = [...item.mcqs, ...customList];
+
+      for (let i = allMcqs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allMcqs[i], allMcqs[j]] = [allMcqs[j], allMcqs[i]];
+      }
+
+      APP_STATE.activeQuizMcqs = allMcqs;
+      const area = document.getElementById('tabContentArea');
+      let html = `
+        <div class="content-box">
+          <div class="quiz-tools">
+            <button class="btn-primary" onclick="openMcqModal()">+ નવો MCQ ઉમેરો</button>
+            <button class="btn-secondary" onclick="renderMcqSection()">🔄 મૂળ ટેસ્ટ પર પાછા જાઓ</button>
+          </div>
+          <div class="box-title" style="color:#10b981;">⚡ Auto Quiz Mode સક્રિય થયો (રેન્ડમ ક્રમ)</div>
+      `;
+
+      allMcqs.forEach((mcq, qIdx) => {
+        html += `
+          <div class="quiz-card" id="quizCard_${qIdx}">
+            <div class="quiz-q">${qIdx + 1}. ${mcq.q}</div>
+            <div class="quiz-options">
+              ${mcq.opts.map((opt, oIdx) => `
+                <button class="quiz-opt-btn" onclick="handleSelectQuizOption(${qIdx}, ${oIdx})">
+                  ${String.fromCharCode(65 + oIdx)}. ${opt}
+                </button>
+              `).join('')}
+            </div>
+            <div class="quiz-feedback" id="feedback_${qIdx}"></div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      area.innerHTML = html;
+    }
+
+    function openMcqModal() {
+      document.getElementById('addMcqModal').classList.remove('hidden');
+    }
+
+    function closeMcqModal() {
+      document.getElementById('addMcqModal').classList.add('hidden');
+      document.getElementById('customMcqForm').reset();
+    }
+
+    function saveCustomMcq(event) {
+      event.preventDefault();
+      const itemId = APP_STATE.activeItem.id;
+      const q = document.getElementById('mcqQuestion').value.trim();
+      const optA = document.getElementById('mcqOptA').value.trim();
+      const optB = document.getElementById('mcqOptB').value.trim();
+      const optC = document.getElementById('mcqOptC').value.trim();
+      const optD = document.getElementById('mcqOptD').value.trim();
+      const ans = parseInt(document.getElementById('mcqCorrectAnswer').value, 10);
+      const exp = document.getElementById('mcqExplanation').value.trim();
+
+      const newMcq = { q, opts: [optA, optB, optC, optD], ans, exp };
+
+      if (!APP_STATE.userCustomMcqs[itemId]) {
+        APP_STATE.userCustomMcqs[itemId] = [];
+      }
+      APP_STATE.userCustomMcqs[itemId].push(newMcq);
+      localStorage.setItem('gseb10_custom_mcq', JSON.stringify(APP_STATE.userCustomMcqs));
+
+      closeMcqModal();
+      renderMcqSection();
+    }
+
+    function toggleFontSize() {
+      APP_STATE.fontSizeLarge = !APP_STATE.fontSizeLarge;
+      document.getElementById('appViewport').classList.toggle('font-lg', APP_STATE.fontSizeLarge);
+    }
+  </script>
+</body>
+</html>

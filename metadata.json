@@ -1,0 +1,6 @@
+{
+  "name": "GSEB Class 10 Sanskrit - સંસ્કૃત સાધના",
+  "description": "GSEB ધોરણ 10 સંસ્કૃત વ્યાકરણ, પદ્ય, ગદ્ય, શોર્ટકટ ટ્રીક્સ, કોષ્ટકો, અનુવાદ અને બોર્ડ IMP પ્રશ્નો.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
